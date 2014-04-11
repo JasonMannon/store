@@ -10,6 +10,7 @@ gem 'turbolinks'
 gem 'bootstrap-sass-extras'
 gem 'bootstrap-sass'
 gem 'bcrypt'
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
 
 group :development do
