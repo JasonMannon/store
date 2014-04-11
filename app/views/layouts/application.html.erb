@@ -8,9 +8,19 @@
 </head>
 <body>
 	<div class="navbar">
+		<% if current_user %>
+		  <% if current_user.owner? %>
+            <%= link_to "New Admin", new_admin_path %> |
+		    
+		 <% end %>
 		<%= link_to "Home", root_url %> |
 		<%= link_to "New Product", new_product_path %> |
-		<%= link_to "New Admin", new_admin_path %>
+		<%= link_to "Log Out", logout_path %> |
+		 Logged in as <%= current_user.username %>
+		<% else %>
+		<%= link_to "Home", root_url %> |
+		<%= link_to "Log in", login_path %>
+		<% end %>
 
 
 
